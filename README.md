@@ -13,18 +13,20 @@ For each of the following topics, please answer each of the questions. You can u
 
 
 2. What two columns must be present in a join table?
-
-
+by ID
 3. Given the example below, edit the code to define a has many :through relationship.
 
     ```ruby
     class Customer < ActiveRecord::Base
+        has many: :products
     end
 
     class Product < ActiveRecord::Base
+        has many: :cutomers
     end
 
     class Purchase < ActiveRecord::Base
+        has many: :customer
     end
     ```
 
@@ -40,17 +42,13 @@ For each of the following topics, please answer each of the questions. You can u
 ### Questions
 
 1. What does the `current_user` method that the Devise gem provides?
-
-
+show all the sinh in of users
 2. What does the `authenticate_user!` method that the Devise gem provides?
-
-
+if the user is not sing in same pages will hidein
 3. Write a signout link using the `link_to` rails helper and a devise path.
-
-
+<%= link_to "sign in ", sign_in_path %>
 4. How do I generate a devise model in the terminal?
-
-
+rails generate devise:install
 5. What are the trade offs for using a gem for authentication over a handrolled solution? (no real right answer)
 
 
